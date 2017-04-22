@@ -1,0 +1,31 @@
+﻿<Window x:Class="ImgConverter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Image Converter" Height="604.384" Width="375"
+    xmlns:WPFLocalizeExtension="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension">
+    <Grid Width="349" Height="486">
+        <Label Height="28" Margin="12,12,0,0" Name="labelSelectImages" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesSelectImages}"/>
+        <Button Height="28" Margin="0,10.138,44,0" Name="buttonSelectImages" VerticalAlignment="Top" HorizontalAlignment="Right" Width="33" Click="ButtonSelectImages_Click">...</Button>
+        <ListBox Margin="12,54,26,211.09" Name="listBoxFiles" />
+        <Label Height="28" Margin="12,0,0,164.428" Name="labelSelectDestinationFolder" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="186" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesSelectTargetLocation}" />
+        <Button Height="28" Margin="0,0,44,164.428" Name="buttonSelectDestinationFolder" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="33" Click="ButtonSelectDestinationFolder_Click">...</Button>
+        <Label Height="27.675" Margin="12,0,117.987,138.875" Name="DestinationFolderPath" VerticalAlignment="Bottom">C:\</Label>
+        <Button Height="23" Margin="12,0,0,35.552" Name="buttonConvert" VerticalAlignment="Bottom" Click="ButtonConvert_Click" IsEnabled="False" HorizontalAlignment="Left" Width="197" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesConvert}" />
+        <ComboBox Height="23" Margin="0,0,44,107.767" Name="comboBoxImageFormat" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="56.906" SelectedIndex="2">
+            <ComboBoxItem>bmp</ComboBoxItem>
+            <ComboBoxItem>jpg</ComboBoxItem>
+            <ComboBoxItem>png</ComboBoxItem>
+        </ComboBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,102.212" Name="labelPixelFormat" VerticalAlignment="Bottom" Width="120" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesSelectType}" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,0,44,71.104" Name="comboBoxPixelFormat" SelectedIndex="3" VerticalAlignment="Bottom" Width="56.906" Opacity="1">
+            <ComboBoxItem>8</ComboBoxItem>
+            <ComboBoxItem>16</ComboBoxItem>
+            <ComboBoxItem>24</ComboBoxItem>
+            <ComboBoxItem>32</ComboBoxItem>
+        </ComboBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,67.771" Name="label4" VerticalAlignment="Bottom" Width="120" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesSelectPixelFormat}" />
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,26,36" Name="buttonCancel" VerticalAlignment="Bottom" Width="100.906" Click="ButtonCancel_Click" IsEnabled="False" Content="{WPFLocalizeExtension:LocText ImgConverter:Resources:ResourcesCancel}"/>
+        <Button Content="DE" Height="23" HorizontalAlignment="Left" Margin="305,-34,0,0" Name="buttonDE" VerticalAlignment="Top" Width="32" Click="ButtonDE_Click" />
+        <Button Content="EN" Height="23" HorizontalAlignment="Left" Margin="272,-34,0,0" Name="buttonEN" VerticalAlignment="Top" Width="32" Click="ButtonEN_Click" />
+    </Grid>
+</Window>
